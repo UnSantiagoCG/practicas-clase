@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="/dia 3/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formularios</h1>
+    </header>
+    <main>
+      <form
+        action="/ruta/reception/datos"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <header><h2>demo formulario</h2></header>
+        <div>
+          <label for="campo1">Nombre de usuario</label>
+          <input id="campo1" name="Username" placeholder="my-username" />
+        </div>
+        <div>
+          <label for="campo2">Contraseña</label>
+          <input id="campo2" name="password" type="password" required />
+        </div>
+        <div>
+          <label for="campo3">Email</label>
+          <input id="campo3" name="email" type="email" />
+        </div>
+        <div>
+          <label for="campo4">Tel</label>
+          <input id="campo4" name="tel" type="number" />
+        </div>
+        <div>
+          <label for="campo5">Fecha de nacimiento</label>
+          <input id="campo5" name="date" type="date" />
+        </div>
+        <div>
+          <label for="campo6">subir imagen</label>
+          <input id="campo6" name="file" type="file" accept="imagen/*" />
+        </div>
+        <div>
+          <label for="campo7">color</label>
+          <input id="campo7" name="color" type="color" />
+        </div>
+        <hr />
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+
+        <hr />
+        <div>
+          <input
+            id="opcion1"
+            name="send-emails"
+            type="checkbox"
+            value="send-emails"
+          />
+          <label for="opcion1">Desea recibir emails</label>
+        </div>
+        <div>
+          <input id="opcion1" name="opcion" type="checkbox" />
+          <label for="opcion1">elija opcion</label>
+        </div>
+
+        <hr />
+        <div>
+          <label for="user-type">tipo de usuario</label>
+          <select name="user-type" id="user-type">
+            <option value="super-user">super usuario</option>
+            <option value="buyer">comprador</option>
+            <option value="seller">vendedoro</option>
+          </select>
+        </div>
+        <hr />
+
+        <fieldset>
+          <legend>Información personal</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </fieldset>
+
+        <form>
+          <p>Género:</p>
+
+          <label for="genero_m">Masculino</label>
+          <input
+            type="radio"
+            id="genero_m"
+            name="genero"
+            value="masculino"
+            checked
+          />
+
+          <label for="genero_f">Femenino</label>
+          <input type="radio" id="genero_f" name="genero" value="femenino" />
+
+          <label for="genero_o">Otro</label>
+          <input type="radio" id="genero_o" name="genero" value="otro" />
+        </form>
+
+        <hr />
+        <select name="libro" id="listado">
+          <optgroup label="Stephen King">
+            <option value="1">IT</option>
+            <option value="2" selected>Carrie</option>
+            <option value="3">El Resplandor</option>
+            <option value="4">Misery</option>
+          </optgroup>
+          <optgroup label="G.R.R. Martin">
+            <option value="5">Juego de Tronos</option>
+            <option value="6">Choque de Reyes</option>
+            <option value="7">Tormenta de Espadas</option>
+          </optgroup>
+        </select>
+        <hr />
+        <br />
+        <button type="submit" id="send">ENVIAR</button>
+        <button type="button">Boton Comùn</button>
+        <button type="reset">Reiniciar</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
